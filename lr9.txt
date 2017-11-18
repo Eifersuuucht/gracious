@@ -1,0 +1,51 @@
+#include "stdafx.h"
+#include <iostream>
+#include "time.h"
+#include <iomanip>
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	int const n = 12;
+	int const m = 15;
+	int A[n][m];
+	srand(time(NULL));
+	for (int i = 0; i < n; i++)
+	{
+
+		for (int j = 0; j < m; j++)
+		{
+			A[i][j] = rand() % 2001 - 1000;
+			cout << setw(7) << A[i][j];
+		}
+		cout << endl;
+	}
+
+	for (int j = 0; j < m; j += 2)
+	{
+		int max = 0;
+		for (int i = 0; i < n; i++)
+		{
+			if (A[max][j] >= 0)
+			{
+				max++;
+			} else 
+			if (A[max][j] < 0) break;
+		}
+		for (int i = 1; i < n; i++)
+		{
+			if (A[i][j] < 0)
+			{
+				if (abs(A[i][j]) > abs(A[max][j]))
+					max = i;
+			}
+		}
+		cout << "A[" << max << "][" << j << "] = " << A[max][j] << endl;
+	}
+	
+	system("pause");
+    return 0;
+}
+
