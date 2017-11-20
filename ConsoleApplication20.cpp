@@ -22,7 +22,7 @@ int func_1(int A, double z)
 		return a;
 	}
 	else return 310001;
-} // ff
+} // first function
 		double func_2(double x, double y)
 		{
 			double b;
