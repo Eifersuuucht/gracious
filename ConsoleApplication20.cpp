@@ -22,7 +22,7 @@ int func_1(int A, double z)
 		return a;
 	}
 	else return 310001;
-}
+} // ff
 		double func_2(double x, double y)
 		{
 			double b;
@@ -32,7 +32,7 @@ int func_1(int A, double z)
 			return b;
 			}
 			else return 310001;
-		}
+		} //sf
 
 			int func_3(int a, double b)
 			{
@@ -47,7 +47,7 @@ int func_1(int A, double z)
 					return rez;
 				}
 	
-			}
+			} //tf
 
 				int main()
 				{
